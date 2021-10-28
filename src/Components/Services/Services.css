@@ -1,0 +1,15 @@
+.card-deck{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.services .card img{
+    height: 250px;
+}
+.services-info{
+    display: flex;
+    justify-content: space-between;
+}
+.services-info i {
+    margin-right: 10px;
+}
