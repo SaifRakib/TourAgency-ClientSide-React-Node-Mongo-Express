@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 
 const ServiceDetails = () => {
+    const {serviceId} = useParams();
+    const [service, setService] = useState({});
+    console.log(service);
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/allServices/${serviceId}`)
+            .then(res => res.json())
+            .then(data => setService(data));
+    }, [])
     return (
         <div>
+    
             <div className="service_details">
                 <div className="service_img">
                     <img src="" alt="" />
                 </div>
                 <div className="service_information">
-                    <h3 className="service_title">Cox's Bazar in the leargest sea beach in the world.</h3>
+                    <h3 className="service_title">{service.title}</h3>
 
                    <div className="service_place">
                    <p><i className="fas fa-calendar-week"></i>3 days</p>
