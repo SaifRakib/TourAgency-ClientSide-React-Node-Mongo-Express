@@ -1,16 +1,20 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AdminDashboard from './Components/Admin/AdminDashboard/AdminDashboard';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
+import PrivateRoute from './Components/PrivateRoute';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import AuthProvider from './Context/AuthProvider';
 
 
 
 function App() {
   return (
-      <div>
+      <AuthProvider>
         <Router>
           <Header></Header>
           <Switch>
@@ -20,8 +24,14 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/services">
+            <PrivateRoute path="/services">
               <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/admin">
+              <AdminDashboard></AdminDashboard>
             </Route>
             
 
@@ -31,7 +41,7 @@ function App() {
           </Switch>
           <Footer></Footer>
         </Router>
-      </div>
+      </AuthProvider>
     
   );
 }
