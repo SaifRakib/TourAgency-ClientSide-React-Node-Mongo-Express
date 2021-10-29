@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Services.css';
-import service1 from './../../image/service1.jpg';
-import service2 from './../../image/service2.jpg';
-import service3 from './../../image/service3.jpg';
 import { Link } from 'react-router-dom';
 import Service from '../Service/Service';
 
@@ -16,6 +13,7 @@ const Services = () => {
     }, [])
     return (
         <div className="container">
+            <h2 className="text-center my-5">Our Popular Services</h2>
             <div className="card-deck my-5">
                {
                    services.map(service => <Service key={service._id} service={service}></Service>)

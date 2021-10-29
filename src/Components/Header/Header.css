@@ -1,0 +1,16 @@
+.menu .navbar-brand{
+    color: #ff5e14;
+    font-weight: 700;
+    font-size: 30px;
+}
+.menu .navbar-nav .nav-item .nav-link{
+    color: rgb(19, 19, 19);
+    font-weight: 600;
+    transition: all linear .3s;
+}
+.menu .navbar-nav .nav-item .nav-link:hover{
+    color: #ff5e14 !important;
+}
+.menu .navbar-nav .nav-item .nav-link:focus{
+    color: #ff5e14 !important;
+}

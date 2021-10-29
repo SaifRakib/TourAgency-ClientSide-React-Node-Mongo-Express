@@ -1,31 +1,38 @@
+import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
 
 const AddServices = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
     const onSubmit = data => {
-        fetch('http://localhost:8080/addService',{
-            method: "POST",
-            headers:{'content-type':'application/json'},
-            body:JSON.stringify(data)
+       
+        axios.post('http://localhost:8080/addService',data)
+        .then(res => {
+            if(res.data.insertedId){
+                alert('added successfully');
+                reset();
+            }
         })
-        .then(res => res.json())
-        .then(result => console.log(result))
     };
+   
     return (
         <div className="container">
+
+            <h2 className="text-center my-5">Add New Service</h2>
              <form onSubmit={handleSubmit(onSubmit)}>
                 
-                <input {...register("title")} placeholder="Tour Title" /> <br />
-                <input {...register("img")} placeholder="Tour Place Image Link" /> <br />
-                <input type="number" {...register("days")} placeholder="Tour days" /> <br />
-                <input {...register("place")} placeholder="Tour Place" /> <br />
-                <input type="number" {...register("money")} placeholder="Tour Spend" /> <br />
-                <input {...register("description")} placeholder="Description" />  <br />
+                <input {...register("title", { required: true })} placeholder="Tour Title" className="mb-2 p-2" /> <br />
+                <input {...register("img", { required: true })} placeholder="Tour Place Image Link" className="mb-2 p-2" /> <br />
+                <input type="number" {...register("days", { required: true })} placeholder="Tour days" className="mb-2 p-2" /> <br />
+                <input {...register("place",{ required: true })} placeholder="Tour Place" className="mb-2 p-2" /> <br />
+                <input type="number" {...register("money",{ required: true })} placeholder="Tour Spend" className="mb-2 p-2" /> <br />
+                <input {...register("description",{ required: true })} placeholder="Description" className="mb-2 p-2" />  <br />
+                <input {...register("short_desc",{ required: true })} placeholder="Short Description" className="mb-2 p-2" />  <br />
                 
-                {errors.exampleRequired && <span>This field is required</span>} 
+                {errors.title,errors.img,errors.days,errors.place,errors.money,errors.description,errors.short_desc && <span>This field is required</span>} <br />
                 
-                <input type="submit" />
+                <input className="btn btn-primary" type="submit" />
             </form>
         </div>
     );

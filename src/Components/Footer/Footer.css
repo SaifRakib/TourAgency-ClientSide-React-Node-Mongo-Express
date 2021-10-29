@@ -44,6 +44,9 @@ ul {
 .footer-logo {
   margin-bottom: 30px;
 }
+.footer-logo h3{
+  color: #ff5e14;
+}
 .footer-logo img {
     max-width: 200px;
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const {serviceId} = useParams();
@@ -12,28 +13,37 @@ const ServiceDetails = () => {
             .then(data => setService(data));
     }, [])
     return (
-        <div>
-    
-            <div className="service_details">
-                <div className="service_img">
-                    <img src="" alt="" />
-                </div>
-                <div className="service_information">
-                    <h3 className="service_title">{service.title}</h3>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-12 my-5">
+                    <div className="service_details">
+                        <div className="service_img text-center">
+                            <img src={service.img} className="img-fluid" alt="" />
+                        </div>
+                        <div className="service_information">
+                            <div className="service_title text-center my-5">
+                                <h3 className="text-info">{service.title}</h3>
+                            </div>
 
-                   <div className="service_place">
-                   <p><i className="fas fa-calendar-week"></i>3 days</p>
-                    <p><i className="fas fa-map-marker-alt"></i>Cox's Bazar, Bangladesh</p>
-                   </div>
+                            <div className="service_place">
+                                <p><i className="fas fa-calendar-week"></i>{service.days} Days</p>
+                                <p><i className="fas fa-map-marker-alt"></i>{service.place}</p>
+                            </div>
 
-                   <div className="service_description">
-                       <p></p>
-                   </div>
+                            <div className="service_description text-center px-5 mb-5">
+                                <p>{service.description}</p>
+                            </div>
 
-                   <div className="service_details_button">
-                       <button>Place Order</button>
-                   </div>
+                            <div className="total_cost text-center mb-5">
+                                <h5 className="text-dark">Total Cost For {service.days} Days : BDT {service.money}</h5>
+                            </div>
 
+                            <div className="service_details_button text-center">
+                                <button className="btn btn-primary">Place Order</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

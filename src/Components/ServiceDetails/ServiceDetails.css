@@ -1,0 +1,7 @@
+.service_place{
+    display: flex;
+    justify-content: space-around;
+}
+.service_place p i{
+    margin-right: 10px;
+}

@@ -14,7 +14,7 @@ const Footer = () => {
                             <i className="fas fa-map-marker-alt"></i>
                             <div className="cta-text">
                                 <h4>Find us</h4>
-                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                                <span>1010 Avenue, Dhaka, Bangladesh</span>
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                             <i className="fas fa-phone"></i>
                             <div className="cta-text">
                                 <h4>Call us</h4>
-                                <span>9876543210 0</span>
+                                <span>01514563322</span>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                             <i className="far fa-envelope-open"></i>
                             <div className="cta-text">
                                 <h4>Mail us</h4>
-                                <span>mail@info.com</span>
+                                <span>travelx@info.com</span>
                             </div>
                         </div>
                     </div>
@@ -43,17 +43,16 @@ const Footer = () => {
                     <div className="col-xl-4 col-lg-4 mb-50">
                         <div className="footer-widget">
                             <div className="footer-logo">
-                                <h3><Link to="index.html">TravelX</Link></h3>
+                                <h3>TravelX</h3>
                             </div>
                             <div className="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                elit,Lorem ipsum dolor sit amet.</p>
+                                <p>TravelX is a travel agency. We can manage all the tour of all countrys. Flight ticket, hotel booking, vichales manage all our duty.  </p>
                             </div>
                             <div className="footer-social-icon">
                                 <span>Follow us</span>
-                                <Link to="#"><i className="fab fa-facebook-f facebook-bg"></i></Link>
-                                <Link to="#"><i className="fab fa-twitter twitter-bg"></i></Link>
-                                <Link to="#"><i className="fab fa-google-plus-g google-bg"></i></Link>
+                                <Link to="https://www.facebook.com/saifrakib.hasan.58/"><i className="fab fa-facebook-f facebook-bg"></i></Link>
+                                <Link to="https://twitter.com/SAIFRAKIBHASAN3"><i className="fab fa-twitter twitter-bg"></i></Link>
+                                <Link to="https://github.com/SaifRakib"><i className="fab fa-google-plus-g google-bg"></i></Link>
                             </div>
                         </div>
                     </div>
@@ -100,7 +99,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div className="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <Link to="githib.com">Rakib</Link></p>
+                            <p>Copyright &copy; 2021, All Right Reserved <Link to="https://github.com/SaifRakib">Rakib</Link></p>
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">

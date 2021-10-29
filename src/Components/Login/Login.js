@@ -19,7 +19,7 @@ const Login = () => {
         <div className="container my-5">
             <div className=" row col-md-6 offset-3">
                 <h2 className="text-center">Login</h2>
-                <button  className="btn-regular my-5" onClick={handleGoogleLogin}>Login with Google</button>
+                <button  className="btn btn-primary my-5" onClick={handleGoogleLogin}>Login with Google</button>
             </div>
 
 
