@@ -17,7 +17,7 @@ const AddServices = () => {
     };
    
     return (
-        <div className="container">
+        <div className="container my-5">
 
             <h2 className="text-center my-5">Add New Service</h2>
              <form onSubmit={handleSubmit(onSubmit)}>
@@ -30,7 +30,7 @@ const AddServices = () => {
                 <input {...register("description",{ required: true })} placeholder="Description" className="mb-2 p-2" />  <br />
                 <input {...register("short_desc",{ required: true })} placeholder="Short Description" className="mb-2 p-2" />  <br />
                 
-                {errors.title,errors.img,errors.days,errors.place,errors.money,errors.description,errors.short_desc && <span>This field is required</span>} <br />
+                {(errors.title,errors.img,errors.days,errors.place,errors.money,errors.description,errors.short_desc) && <span>This field is required</span>} <br />
                 
                 <input className="btn btn-primary" type="submit" />
             </form>

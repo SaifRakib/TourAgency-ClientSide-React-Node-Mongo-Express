@@ -1,0 +1,17 @@
+.airlines{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.air_body{
+    padding: 10px 20px;
+    transition: all linear .3s;
+    border-radius: 10px;
+    margin: 20px 0;
+   
+}
+.air_body:hover{
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+    color: rgb(90, 90, 221);
+}

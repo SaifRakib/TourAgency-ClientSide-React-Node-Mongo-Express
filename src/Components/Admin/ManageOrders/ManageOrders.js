@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -30,10 +31,11 @@ const ManageOrders = () => {
         }    
     }
 
+
     return (
         <div>
              <div>
-                <h1>All Orders {orders.length}</h1>
+                <h1>All Orders : {orders.length}</h1>
                 <table className="table">
                     <thead>
                     <tr>
@@ -43,11 +45,12 @@ const ManageOrders = () => {
                         <th>Phone</th>
                         <th>Address</th>
                         <th>Date</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     {orders.map((order, index) => (
-                    <tbody>
+                    <tbody key={order._id}>
                         <tr>
                         <td>{index+1}</td>
                         <td>{order.name}</td>
@@ -55,7 +58,13 @@ const ManageOrders = () => {
                         <td>{order.phone}</td>
                         <td>{order.address}</td>
                         <td>{order.date}</td>
-                        <button onClick={() => handleDeleteOrder(order._id)} className="btn text-white bg-danger p-2">Delete</button>
+                        <td>{order.status}</td>
+                        <td>
+                        <button onClick={() => handleDeleteOrder(order._id)} className="btn text-white bg-danger mx-2 p-2">Delete</button>
+
+                        <Link to={`/orders/updateOrder/${order._id}`}><button className="btn text-white bg-warning p-2">Update</button></Link>
+                        </td>
+
                         
                         </tr>
                     </tbody>

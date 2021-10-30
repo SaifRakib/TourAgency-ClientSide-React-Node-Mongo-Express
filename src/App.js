@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AdminDashboard from './Components/Admin/AdminDashboard/AdminDashboard';
-import ManageOrders from './Components/Admin/ManageOrders/ManageOrders';
+import UpdateOrder from './Components/Admin/UpdateOrder/UpdateOrder';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -38,9 +38,9 @@ function App() {
             <Route path="/placeorder">
               <Shipping></Shipping>
             </Route>
-            
-
-            
+            <Route path="/orders/updateOrder/:id">
+              <UpdateOrder></UpdateOrder>
+            </Route>
 
             <Route path="*">
               <NotFound></NotFound>

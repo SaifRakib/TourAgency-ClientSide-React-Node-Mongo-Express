@@ -17,6 +17,9 @@ const Shipping = () => {
         today = mm + '/' + dd + '/' + yyyy;
         data.date = today;
 
+        const status = "Pending";
+        data.status = status;
+
 
        
         axios.post('http://localhost:8080/orders',data)
