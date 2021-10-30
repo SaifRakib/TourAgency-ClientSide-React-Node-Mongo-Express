@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
@@ -39,7 +40,7 @@ const ServiceDetails = () => {
                             </div>
 
                             <div className="service_details_button text-center">
-                                <button className="btn btn-primary">Place Order</button>
+                                <Link to="/placeorder"><button className="btn btn-primary">Place Order</button></Link>
                             </div>
 
                         </div>
