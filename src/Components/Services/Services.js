@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Services.css';
-import { Link } from 'react-router-dom';
 import Service from '../Service/Service';
 
 
@@ -14,15 +13,18 @@ const Services = () => {
     return (
         <div className="container">
             <h2 className="text-center my-5">Our Popular Services</h2>
-            <div className="card-deck my-5">
-               {
-                   services.map(service => <Service key={service._id} service={service}></Service>)
-               }
-             
-                
-              
-               
-            </div>
+        {services.length === 0?
+           <div className="text-center">
+                <div className="spinner-border text-dark my-5" role="status">
+                    <p className="sr-only my-5">Loading...</p>
+                </div>
+           </div>
+        : 
+           <div className="card-deck my-5">
+                {
+                    services.map(service => <Service key={service._id} service={service}></Service>)
+                }
+            </div>}
         </div>
     );
 };

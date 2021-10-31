@@ -7,3 +7,17 @@
 .duty_info{
     background-color: #dddddd;
 }
+
+ /* Small devices  */
+@media (max-width: 668px) { 
+    .duty{
+        grid-template-columns: 1fr;
+    }
+ }
+
+  /* Midium device */
+  @media (min-width: 669px) and (max-width: 992px) { 
+    .duty{
+        grid-template-columns: 1fr;
+    }
+ }

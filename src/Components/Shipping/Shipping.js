@@ -32,7 +32,7 @@ const Shipping = () => {
     };
     return (
         <div>
-             <div className="container text-center">
+             <div className="container text-center my-5">
 
             <h2 className="text-center my-5">Add Your Information for Shipping</h2>
             <form onSubmit={handleSubmit(onSubmit)}>

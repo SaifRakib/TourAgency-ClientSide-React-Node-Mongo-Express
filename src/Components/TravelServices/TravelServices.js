@@ -6,7 +6,7 @@ const TravelServices = () => {
       <div>
         <div className="container">
             <div className="row">
-                <div className="col-md-12">
+                <div className="col-md-12 col-12">
                     <div className="header_title text-center my-5">
                         <h2>Our Duty</h2>
                     </div>
