@@ -24,9 +24,6 @@ const Header = () => {
                             <li className="nav-item">
                             <Link className="nav-link" to="/services">Services</Link>
                             </li>
-                            <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact Us</Link>
-                            </li>
                             {user.email && <li className="nav-item"> <span className="nav-link" style={{ color: 'tomato' }}>{user.displayName}</span> </li>}
                             { user.email?
                                 <li className="nav-item mx-2">
