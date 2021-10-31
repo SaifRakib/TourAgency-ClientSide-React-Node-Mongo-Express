@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import MyOrders from "../../MyOrders/MyOrders";
 import AddServices from "../AddServices/AddServices";
 import ManageOrders from "../ManageOrders/ManageOrders";
+import MyOrders from "../MyOrders/MyOrders";
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {

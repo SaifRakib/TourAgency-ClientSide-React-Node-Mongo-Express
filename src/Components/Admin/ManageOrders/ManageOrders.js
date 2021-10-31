@@ -6,7 +6,7 @@ const ManageOrders = () => {
     const [control,setControl] = useState(false);
 
     useEffect(() => {
-      fetch("http://localhost:8080/orders")
+      fetch("https://haunted-goosebumps-18178.herokuapp.com/orders")
         .then((res) => res.json())
         .then((data) => setOrders(data));
     }, [control]);
@@ -16,7 +16,7 @@ const ManageOrders = () => {
 
         let confirmation = window.confirm("Are you sure!! Your want to delete it?");
         if(confirmation === true){
-            fetch(`http://localhost:8080/deleteOrder/${id}`, {
+            fetch(`https://haunted-goosebumps-18178.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
             headers: { "content-type": "application/json" },
           })
@@ -60,7 +60,7 @@ const ManageOrders = () => {
                         <td>{order.date}</td>
                         <td>{order.status}</td>
                         <td>
-                        <button onClick={() => handleDeleteOrder(order._id)} className="btn text-white bg-danger mx-2 p-2"><i class="fas fa-trash-alt"></i></button>
+                        <button onClick={() => handleDeleteOrder(order._id)} className="btn text-white bg-danger mx-2 p-2">Del</button>
 
                         <Link to={`/orders/updateOrder/${order._id}`}><button className="btn text-white bg-warning p-2">Update</button></Link>
                         </td>

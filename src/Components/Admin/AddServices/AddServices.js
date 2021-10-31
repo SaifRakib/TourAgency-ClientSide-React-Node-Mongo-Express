@@ -7,7 +7,7 @@ const AddServices = () => {
 
     const onSubmit = data => {
        
-        axios.post('http://localhost:8080/addService',data)
+        axios.post('https://haunted-goosebumps-18178.herokuapp.com/addService',data)
         .then(res => {
             if(res.data.insertedId){
                 alert('added successfully');

@@ -22,7 +22,7 @@ const Shipping = () => {
 
 
        
-        axios.post('http://localhost:8080/orders',data)
+        axios.post('https://haunted-goosebumps-18178.herokuapp.com/orders',data)
         .then(res => {
             if(res.data.insertedId){
                 alert('Your Order Process.Thank You.');

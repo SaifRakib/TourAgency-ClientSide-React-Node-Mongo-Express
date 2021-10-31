@@ -6,7 +6,7 @@ const UpdateOrder = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:8080/orders/${id}`;
+        const url = `https://haunted-goosebumps-18178.herokuapp.com/orders/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
@@ -22,7 +22,7 @@ const UpdateOrder = () => {
 
     // // handle update 
     const handleUpdateOrder = (e) => {
-        const url = `http://localhost:8080/orders/${id}`;
+        const url = `https://haunted-goosebumps-18178.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

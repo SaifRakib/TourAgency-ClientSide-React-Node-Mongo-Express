@@ -9,7 +9,7 @@ const ServiceDetails = () => {
     console.log(service);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/allServices/${serviceId}`)
+        fetch(`https://haunted-goosebumps-18178.herokuapp.com/allServices/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
