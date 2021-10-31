@@ -45,13 +45,13 @@ const UpdateOrder = () => {
 
     return (
         <div>
-            <div className="container text-center">
+            <div className="container text-center my-5">
 
-                <h2 className="text-center my-5">Update Your Information for Shipping</h2>
+                <h2 className="text-center my-5">Update status for Shipping</h2>
                 <form onSubmit={handleUpdateOrder}>
 
                 <input type="text" onChange={handleStatusChange} value={order.status || ''} /><br />
-                <input className="btn btn-primary" type="submit" />
+                <input className="btn btn-primary my-4" type="submit" />
                 </form>
             </div>
         </div>

@@ -60,7 +60,7 @@ const ManageOrders = () => {
                         <td>{order.date}</td>
                         <td>{order.status}</td>
                         <td>
-                        <button onClick={() => handleDeleteOrder(order._id)} className="btn text-white bg-danger mx-2 p-2">Delete</button>
+                        <button onClick={() => handleDeleteOrder(order._id)} className="btn text-white bg-danger mx-2 p-2"><i class="fas fa-trash-alt"></i></button>
 
                         <Link to={`/orders/updateOrder/${order._id}`}><button className="btn text-white bg-warning p-2">Update</button></Link>
                         </td>
